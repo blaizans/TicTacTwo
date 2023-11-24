@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OOP</title>
   <style>
+    
     #board {
       width: 600px;
       height: 600px;
@@ -17,7 +18,7 @@
       grid-template: repeat(3, 1fr) / repeat(3, 1fr);
       padding-top: 7%;
     }
-  
+
     button {
       border: 6px solid #73686A;
       background-color: #CFC6C8;
@@ -30,12 +31,12 @@
       align-items: center;
       z-index: 99;
     }
-  
+
     img {
       height: 160px;
       width: 160px;
     }
-  
+
     .overlay-container {
       position: fixed;
       top: 0;
@@ -50,8 +51,8 @@
       align-items: center;
       z-index: 99;
     }
-  
-  
+
+
     button.restart-button {
       background-color: #73686A;
       color: #fff;
@@ -61,68 +62,68 @@
       font-size: 16px;
       border-radius: 5px;
     }
-  
+
     div.win-message {
       color: #fff;
       font-size: 24px;
       margin-bottom: 20px;
-  
+
     }
-  
+
     div.draw-message {
       color: #fff;
       font-size: 24px;
       margin-bottom: 20px;
-  
+
     }
-  
+
     .message-container {
       text-align: center;
       margin-bottom: 20px;
     }
-  
+
     body {
       background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
       background-size: cover;
       -webkit-animation: slidein 100s;
       animation: slidein 100s;
-      
-  
+
+
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-  
+
       -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
-  
+
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
     }
-  
+
     @-webkit-keyframes slidein {
       from {
         background-position: top;
         background-size: 3000px;
       }
-  
+
       to {
         background-position: -100px 0px;
         background-size: 2750px;
       }
     }
-  
+
     @keyframes slidein {
       from {
         background-position: top;
         background-size: 3000px;
       }
-  
+
       to {
         background-position: -100px 0px;
         background-size: 2750px;
       }
-  
+
     }
-  
+
     .center {
       display: flex;
       align-items: center;
@@ -136,19 +137,19 @@
       background: rgba(75, 75, 250, 0.3);
       border-radius: 3px;
     }
-  
+
     .center h1 {
       text-align: center;
       color: white;
       font-family: 'Source Code Pro', monospace;
       text-transform: uppercase;
     }
-    </style>
+  </style>
 </head>
 
 <body>
   <Board></Board>
-
+  
   <script>
     class Board {
 
@@ -284,10 +285,25 @@
     }
 
     const gameBoard = new Board();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const link = document.createElement("a");
+      link.href = "Functional.html";
+      link.style.position = "absolute";
+      link.style.top = "20px";
+      link.style.left = "20px";
+      link.style.zIndex = "101";
+
+      const button = document.createElement("button");
+      button.textContent = "Go to Functional";
+
+      link.appendChild(button);
+      document.body.appendChild(link);
+    });
   </script>
 
-    
-  
+
+
 </body>
 
 </html>
